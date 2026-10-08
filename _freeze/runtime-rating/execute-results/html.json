@@ -1,0 +1,12 @@
+{
+  "hash": "e7417d9811837e4b9ff54ff98d8575ac",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Runtime and Ratings\"\nformat:\n  html:\n    echo: true\n---\n\nWe also want to see if there is a correlation between runtime and movie ratings, as shown by @fig-runtime-rating.\n\n::: {#5af99bf5 .cell execution_count=1}\n``` {.python .cell-code}\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\nfilms = pd.read_csv(\"films.csv\")\n\nplt.scatter(films[\"runtime_min\"], films[\"imdb_rating\"])\nplt.xlabel(\"Runtime (minutes)\")\nplt.ylabel(\"IMDb Rating\")\nplt.title(\"Runtime vs. IMDb Rating\")\nplt.show()\n```\n\n::: {.cell-output .cell-output-display}\n![](runtime-rating_files/figure-html/cell-2-output-1.png){width=589 height=449}\n:::\n:::\n\n\n",
+    "supporting": [
+      "runtime-rating_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

@@ -1,0 +1,13 @@
+---
+title: "Box office index"
+---
+
+This is a website that holds information about 104 films released from 1980 to 2025.
+Information about approximate budgets, worldwide revenues, runtimes, and ratings is included.
+
+Links:
+Budget <https://alin-peepy6.github.io/datasci350-quiz02/budget-revenue.html>\
+Runtime and Review <https://alin-peepy6.github.io/datasci350-quiz02/runtime-review.html>\
+Bond movies <https://alin-peepy6.github.io/datasci350-quiz02/bond.html>\
+
+Chat GPT was used for python code.

@@ -1,0 +1,22 @@
+---
+title: "The Bond Movies"
+format:
+  html:
+    echo: true
+---
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+films = pd.read_csv("films.csv")
+bond = films[films["franchise"] == "James Bond"]
+
+bond = bond.sort_values("year")
+
+plt.plot(bond["year"], bond["revenue_musd"], marker="o")
+plt.xlabel("Year")
+plt.ylabel("Revenue")
+plt.title("James Bond Box Office Revenue")
+plt.show()
+```

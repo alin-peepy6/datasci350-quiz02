@@ -1,0 +1,21 @@
+---
+title: "Budget and Revenue"
+format:
+  html:
+    echo: true
+---
+
+We want to see if there is a correlation between a movie's budget and revenue. This is shown by @fig-budget-revenue
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("films.csv")
+
+plt.scatter(df["budget_musd"], df["revenue_musd"])
+plt.xlabel("Budget")
+plt.ylabel("Revenue")
+plt.title("Budget vs. Revenue")
+plt.show()
+```

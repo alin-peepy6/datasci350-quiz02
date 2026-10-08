@@ -1,0 +1,21 @@
+---
+title: "Runtime and Ratings"
+format:
+  html:
+    echo: true
+---
+
+We also want to see if there is a correlation between runtime and movie ratings, as shown by @fig-runtime-rating.
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+films = pd.read_csv("films.csv")
+
+plt.scatter(films["runtime_min"], films["imdb_rating"])
+plt.xlabel("Runtime (minutes)")
+plt.ylabel("IMDb Rating")
+plt.title("Runtime vs. IMDb Rating")
+plt.show()
+```
