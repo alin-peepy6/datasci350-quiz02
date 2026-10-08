@@ -1,16 +1,30 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "website",
+    "objectID": "runtime-rating.html",
+    "href": "runtime-rating.html",
+    "title": "Runtime and Ratings",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "We also want to see if there is a correlation between runtime and movie ratings, as shown by ?@fig-runtime-rating.\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\nfilms = pd.read_csv(\"films.csv\")\n\nplt.scatter(films[\"runtime_min\"], films[\"imdb_rating\"])\nplt.xlabel(\"Runtime (minutes)\")\nplt.ylabel(\"IMDb Rating\")\nplt.title(\"Runtime vs. IMDb Rating\")\nplt.show()"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "budget-revenue.html",
+    "href": "budget-revenue.html",
+    "title": "Budget and Revenue",
     "section": "",
-    "text": "About this site"
+    "text": "We want to see if there is a correlation between a movie’s budget and revenue. This is shown by ?@fig-budget-revenue\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\ndf = pd.read_csv(\"films.csv\")\n\nplt.scatter(df[\"budget_musd\"], df[\"revenue_musd\"])\nplt.xlabel(\"Budget\")\nplt.ylabel(\"Revenue\")\nplt.title(\"Budget vs. Revenue\")\nplt.show()"
+  },
+  {
+    "objectID": "bond.html",
+    "href": "bond.html",
+    "title": "The Bond Movies",
+    "section": "",
+    "text": "import pandas as pd\nimport matplotlib.pyplot as plt\n\nfilms = pd.read_csv(\"films.csv\")\nbond = films[films[\"franchise\"] == \"James Bond\"]\n\nbond = bond.sort_values(\"year\")\n\nplt.plot(bond[\"year\"], bond[\"revenue_musd\"], marker=\"o\")\nplt.xlabel(\"Year\")\nplt.ylabel(\"Revenue\")\nplt.title(\"James Bond Box Office Revenue\")\nplt.show()"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Box office index",
+    "section": "",
+    "text": "This is a website that holds information about 104 films released from 1980 to 2025. Information about approximate budgets, worldwide revenues, runtimes, and ratings is included.\nLinks: Budget https://alin-peepy6.github.io/datasci350-quiz02/budget-revenue.html\nRuntime and Review https://alin-peepy6.github.io/datasci350-quiz02/runtime-review.html\nBond movies https://alin-peepy6.github.io/datasci350-quiz02/bond.html\n\nChat GPT was used for python code."
   }
 ]
